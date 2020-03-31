@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: rpc-rabbitmq-server
+#logging:
+#  level:
+#    com.diego: DEBUG
+server:
+  port: 8085
+opentracing:
+  jaeger:
+    udp-sender:
+      host: localhost
+      port: 6831
