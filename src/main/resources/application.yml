@@ -1,11 +1,14 @@
 spring:
   application:
     name: rpc-rabbitmq-server
-#logging:
-#  level:
-#    com.diego: DEBUG
+logging:
+  level:
+    com.dchavez: DEBUG
+    org.springframework.web: WARN
+#    io.jaegertracing: INFO
+#    io.opentracing: INFO
 server:
-  port: 8085
+  port: 8087
 opentracing:
   jaeger:
     udp-sender:

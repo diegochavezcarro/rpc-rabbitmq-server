@@ -3,12 +3,16 @@ package com.dchavez.amqp.server.services;
 import org.springframework.stereotype.Service;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
-
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Service
 public class RpcServer {
+	
+//	@Autowired
+//	private RabbitTemplate template;
 
 	private static final Logger logger = LoggerFactory.getLogger(RpcServer.class);
 	@RabbitListener(queues = "tut.rpc.requests")
